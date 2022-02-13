@@ -15,8 +15,13 @@ body {
   font-family: ${props => props.theme.fonts.family.first};
 }
 
-ol, ul, menu {
+ul, li {
   list-style: none;
+}
+
+button,input{
+  font-family: ${props => props.theme.fonts.family.first};
+  color: ${props => props.theme.colors.colorText};
 }
 
 img,svg {
@@ -50,5 +55,12 @@ table {
 a {
   color: inherit;
   text-decoration: inherit; /* no underline */
+}
+
+
+.container{
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 `;

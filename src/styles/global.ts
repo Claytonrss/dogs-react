@@ -10,17 +10,9 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 
-body,html{height:100%;}
-
-
 body {
-	line-height: 1;
-  background: ${props => props.theme.colors.darkBase};
-  color: ${props => props.theme.colors.light};
-  font-family:'Poppins', sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center
+  color: ${props => props.theme.colors.colorText};
+  font-family: ${props => props.theme.fonts.family.first};
 }
 
 ol, ul, menu {

@@ -1,0 +1,10 @@
+# Third party
+**/node_modules
+**/app/public
+**/app/assets
+logs
+run
+build/
+coverage/
+fixtures/
+scripts/bench/benchmarks/**/*.js

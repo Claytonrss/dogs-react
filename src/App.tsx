@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/home';
-import Login from './pages/login';
 import Footer from './components/organisms/footer';
 import Header from './components/organisms/header';
+import Home from './pages/home';
+import Login from './pages/login';
 
 const App: React.FC = () => {
   return (

@@ -10,7 +10,9 @@ const theme = {
   },
   colors: {
     white: '#FFFFFF',
-    gray10: '#EEE',
+    gray10: '#EEEEEE',
+    gray20: '#DDDDDD',
+    gray30: '#666666;',
     colorText: '#333333',
     yellow10: '#FFBB11',
     yellow20: '#764701',

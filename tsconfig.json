@@ -25,6 +25,7 @@
       "@/context/*": ["./context/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/pages/*": ["./pages/*"],
+      "@/routes/*": ["./routes/*"],
       "@/styles/*": ["./styles/*"]
     }
   },

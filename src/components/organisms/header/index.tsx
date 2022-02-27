@@ -20,7 +20,6 @@ const Header: React.FC = () => {
             <Link to="/conta">
               <ContainerLogin>{user.nome}</ContainerLogin>
             </Link>
-            <button onClick={userLogout}>Sair</button>
           </>
         ) : (
           <Link to="/login">

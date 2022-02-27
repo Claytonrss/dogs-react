@@ -7,7 +7,7 @@ export const Container = styled.section`
 
   .last-password {
     display: inline-block;
-    color: #666;
+    color: ${props => props.theme.colors.gray30};
     padding: 0.5rem 0;
     line-height: 1;
 
@@ -28,7 +28,7 @@ export const Container = styled.section`
       &::after {
         content: '';
         display: block;
-        background: #ddd;
+        background: ${({ theme }) => theme.colors.gray20};
         width: 3rem;
         height: 0.5rem;
         border-radius: 0.2erm;

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react';
 
-type typesValidationEnum = 'email' | 'username' | 'notEmpty';
+type typesValidationEnum = 'email' | 'username' | 'password' | 'notEmpty';
 
 type typesValidationInterface = {
   [key in typesValidationEnum]: { regex: RegExp; message: string };
@@ -18,6 +18,11 @@ const validation: typesValidationInterface = {
   email: {
     regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
     message: 'Preencha um email válido',
+  },
+  password: {
+    regex: /^(?=.*\d)(?=.*[a-zA-Z])(?=.*\W)[0-9a-zA-Z\W]{8,}$/,
+    message:
+      'A senha precisa ter no mínimo 8 caracteres. Sendo pelo menos 1 letra, 1 número e 1 carácter especial.',
   },
 };
 

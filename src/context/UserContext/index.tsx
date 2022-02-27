@@ -1,6 +1,6 @@
+import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from '@/api/index';
 import React, { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from '../../api';
 import { UserContextInterface, UserInterface } from './types';
 
 export const UserContext = createContext<UserContextInterface>(
@@ -31,6 +31,8 @@ export const UserStorage: React.FC = ({ children }) => {
         } finally {
           setLoading(false);
         }
+      } else {
+        setLogin(false);
       }
     }
     autoLogin();

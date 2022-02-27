@@ -1,5 +1,5 @@
 import React from 'react';
-import Error from '../error';
+import Error from '@/components/atoms/error';
 import { InputContainer } from './styles';
 import { InputProps } from './types';
 

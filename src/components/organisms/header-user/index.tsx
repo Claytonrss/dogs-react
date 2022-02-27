@@ -14,7 +14,7 @@ const HeaderUser: React.FC = () => {
         setTitle('Feed');
         break;
       case '/conta/postar':
-        setTitle('Poste Foto');
+        setTitle('Poste Sua Foto');
         break;
       case '/conta/estatisticas':
         setTitle('Estatísticas');

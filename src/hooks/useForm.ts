@@ -1,6 +1,11 @@
 import React, { ChangeEvent, useState } from 'react';
 
-type typesValidationEnum = 'email' | 'username' | 'password' | 'notEmpty';
+type typesValidationEnum =
+  | 'email'
+  | 'username'
+  | 'password'
+  | 'number'
+  | 'notEmpty';
 
 type typesValidationInterface = {
   [key in typesValidationEnum]: { regex: RegExp; message: string };
@@ -18,6 +23,10 @@ const validation: typesValidationInterface = {
   email: {
     regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
     message: 'Preencha um email válido',
+  },
+  number: {
+    regex: /^\d+$/,
+    message: 'Utilize apenas números',
   },
   password: {
     regex: /^(?=.*\d)(?=.*[a-zA-Z])(?=.*\W)[0-9a-zA-Z\W]{8,}$/,

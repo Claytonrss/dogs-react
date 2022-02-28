@@ -1,10 +1,10 @@
-export interface UserInterface {
+interface UserInterface {
   id: number;
   nome: string;
   username: string;
   email: string;
 }
-export interface UserContextInterface {
+interface UserContextInterface {
   userLogin: (username: string, password: string) => Promise<void>;
   userLogout: () => void;
   user: UserInterface | null;

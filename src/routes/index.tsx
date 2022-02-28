@@ -1,7 +1,7 @@
 import ProtectedRoute from '@/components/atoms/protected-route';
 import LoginCreate from '@/components/templates/login-create';
 import LoginForm from '@/components/templates/login-form';
-import UserFeed from '@/components/templates/user-feed';
+import Feed from '@/components/organisms/feed';
 import UserPhotoPost from '@/components/templates/user-photo-post';
 import UserStats from '@/components/templates/user-stats';
 import Home from '@/pages/home';
@@ -26,7 +26,7 @@ const Routes: React.FC = () => {
           </ProtectedRoute>
         }
       >
-        <Route path="" element={<UserFeed />}></Route>
+        <Route path="" element={<Feed />}></Route>
         <Route path="postar" element={<UserPhotoPost />}></Route>
         <Route path="estatisticas" element={<UserStats />}></Route>
       </Route>

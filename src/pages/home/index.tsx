@@ -1,12 +1,11 @@
+import Feed from '@/components/organisms/feed';
 import React from 'react';
-
-// import { Container } from './styles';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <h1>Página Home</h1>
-    </div>
+    <section className="container mainContainer">
+      <Feed />
+    </section>
   );
 };
 

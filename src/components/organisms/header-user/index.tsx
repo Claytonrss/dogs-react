@@ -1,5 +1,5 @@
 import Heading from '@/components/atoms/heading';
-import NavHeaderUser from '@/components/molecules/nav-header-user';
+import NavHeaderUser from '@/components/organisms/nav-header-user';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Container } from './styles';

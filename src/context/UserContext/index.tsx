@@ -1,7 +1,6 @@
 import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from '@/api/index';
 import React, { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { UserContextInterface, UserInterface } from './types';
 
 export const UserContext = createContext<UserContextInterface>(
   {} as UserContextInterface

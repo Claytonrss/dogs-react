@@ -1,0 +1,3 @@
+interface PhotoCommentsFormProps {
+  id: number;
+}

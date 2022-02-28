@@ -63,6 +63,10 @@ a {
   color: ${props => props.theme.colors.colorText};
 }
 
+.mainContainer{
+  margin-top: 4rem;
+}
+
 .container{
   max-width: 50rem;
   padding: 0 1rem;

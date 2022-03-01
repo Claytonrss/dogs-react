@@ -26,12 +26,13 @@ export const Container = styled.div`
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
   }
-`;
-export const Image = styled.img`
-  grid-row: 1/4;
 
-  @media (max-width: 64rem) {
-    grid-row: 1;
+  img {
+    grid-row: 1/4;
+
+    @media (max-width: 64rem) {
+      grid-row: 1;
+    }
   }
 `;
 export const Author = styled.p`

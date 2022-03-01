@@ -14,11 +14,11 @@ type typesValidationInterface = {
 const validation: typesValidationInterface = {
   notEmpty: {
     regex: /^[^]+$/,
-    message: 'Preencha um usuário válido',
+    message: 'Preencha um valor válido',
   },
   username: {
-    regex: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
-    message: 'Preencha um usuário válido',
+    regex: /^(?=.{3,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/,
+    message: 'Preencha um username válido',
   },
   email: {
     regex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,

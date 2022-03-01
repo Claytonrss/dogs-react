@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from '@/components/atoms/image';
 import { Container } from './styles';
 import { FeedPhotoItemProps } from './types';
 
@@ -12,7 +13,7 @@ const FeedPhotosItem: React.FC<FeedPhotoItemProps> = ({
 
   return (
     <Container onClick={handleClick}>
-      <img src={photo.src} alt={photo.title} loading="lazy" />
+      <Image src={photo.src} alt={photo.title} loading="lazy" />
       <span>{photo.acessos}</span>
     </Container>
   );

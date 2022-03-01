@@ -1,12 +1,16 @@
 import Heading from '@/components/atoms/heading';
-import React from 'react';
+import Image from '@/components/atoms/image';
+import PhotoDelete from '@/components/organisms//photo-delete';
+import PhotoComments from '@/components/organisms/photo-comments';
+import { UserContext } from '@/context/UserContext';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import PhotoComments from '../photo-comments';
-import { Attributes, Author, Container, Details, Image, Views } from './styles';
+import { Attributes, Author, Container, Details, Views } from './styles';
 import { PhotoContentProps } from './types';
 
 const PhotoContent: React.FC<PhotoContentProps> = ({ data }) => {
   const { photo, comments } = data;
+  const context = useContext(UserContext);
 
   return (
     <Container>
@@ -14,7 +18,12 @@ const PhotoContent: React.FC<PhotoContentProps> = ({ data }) => {
       <Details>
         <div>
           <Author>
-            <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+            {context.user && context.user.username === photo.author ? (
+              <PhotoDelete id={photo.id} />
+            ) : (
+              <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+            )}
+
             <Views>{photo.acessos}</Views>
           </Author>
           <Heading tag="h1">
@@ -26,7 +35,7 @@ const PhotoContent: React.FC<PhotoContentProps> = ({ data }) => {
           </Attributes>
         </div>
       </Details>
-      <PhotoComments id={photo.id} comments={data.comments} />
+      <PhotoComments id={photo.id} comments={comments} />
     </Container>
   );
 };

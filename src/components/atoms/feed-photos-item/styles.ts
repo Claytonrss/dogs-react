@@ -6,7 +6,7 @@ export const Container = styled.li`
   overflow: hidden;
   cursor: pointer;
 
-  img,
+  & > div,
   span {
     grid-area: 1/1;
   }

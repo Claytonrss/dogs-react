@@ -24,6 +24,16 @@ const FeedModal: React.FC<FeedModalProps> = ({ photo, setModalPhoto }) => {
     }
   }
 
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setModalPhoto(null);
+      }
+    };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, []);
+
   return (
     <Container onClick={handleOutsideClick}>
       {error && <Error>{error}</Error>}

@@ -1,7 +1,7 @@
 import React, { SyntheticEvent, useState } from 'react';
 import { Container } from './styles';
 
-const Image: React.FC<ImageProps> = ({ src, alt, loading }) => {
+const Image: React.FC<ImageProps> = ({ src, alt, loading, className }) => {
   const [skeleton, setSkeleton] = useState(true);
 
   function handleLoadImage(event: SyntheticEvent<HTMLDivElement>) {
@@ -9,7 +9,7 @@ const Image: React.FC<ImageProps> = ({ src, alt, loading }) => {
     setSkeleton(false);
   }
   return (
-    <Container>
+    <Container className={className}>
       {skeleton && <div className="skeleton"></div>}
       <img onLoad={handleLoadImage} src={src} alt={alt} loading={loading} />
     </Container>

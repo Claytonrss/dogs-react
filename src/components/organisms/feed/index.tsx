@@ -3,7 +3,7 @@ import FeedPhotos from '@/components/organisms/feed-photos';
 import React, { useState } from 'react';
 import { PhotoProps } from 'types';
 
-const Feed: React.FC = () => {
+const Feed: React.FC<FeedProps> = ({ userID }) => {
   const [modalPhoto, setModalPhoto] = useState<PhotoProps | null>(null);
 
   return (
@@ -11,7 +11,7 @@ const Feed: React.FC = () => {
       {modalPhoto && (
         <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />
       )}
-      <FeedPhotos setModalPhoto={setModalPhoto} />
+      <FeedPhotos setModalPhoto={setModalPhoto} userID={userID} />
     </div>
   );
 };

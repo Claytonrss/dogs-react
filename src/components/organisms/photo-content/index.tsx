@@ -14,7 +14,7 @@ const PhotoContent: React.FC<PhotoContentProps> = ({ data }) => {
 
   return (
     <Container>
-      <Image src={photo.src} alt={photo.title} />
+      <Image src={photo.src} alt={photo.title} className="photo-content-img" />
       <Details>
         <div>
           <Author>

@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: auto;
+  overflow: hidden;
   height: 36rem;
-  border-radius: 0.2rem;
-  background-color: ${({ theme }) => theme.colors.white};
   display: grid;
   grid-template-columns: 36rem 20rem;
   grid-template-rows: auto 1fr auto;
-  overflow: hidden;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 0.2rem;
   opacity: 0;
   transform: scale(0.8);
   animation: scaleUp 0.3s forwards;
@@ -27,7 +27,7 @@ export const Container = styled.div`
     grid-template-columns: minmax(20rem, 40rem);
   }
 
-  img {
+  .photo-content-img {
     grid-row: 1/4;
 
     @media (max-width: 64rem) {

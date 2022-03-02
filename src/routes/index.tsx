@@ -7,10 +7,13 @@ import UserStats from '@/components/templates/user-stats';
 import Home from '@/pages/home';
 import Login from '@/pages/login';
 import User from '@/pages/user';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Route, Routes as RoutesDom } from 'react-router-dom';
+import { UserContext } from '@/context/UserContext';
 
 const Routes: React.FC = () => {
+  const { user } = useContext(UserContext);
+
   return (
     <RoutesDom>
       <Route path="/" element={<Home />} />
@@ -26,7 +29,7 @@ const Routes: React.FC = () => {
           </ProtectedRoute>
         }
       >
-        <Route path="" element={<Feed />}></Route>
+        <Route path="" element={<Feed userID={user?.id} />}></Route>
         <Route path="postar" element={<UserPhotoPost />}></Route>
         <Route path="estatisticas" element={<UserStats />}></Route>
       </Route>

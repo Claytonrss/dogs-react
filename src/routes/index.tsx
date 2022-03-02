@@ -12,6 +12,7 @@ import { Route, Routes as RoutesDom } from 'react-router-dom';
 import { UserContext } from '@/context/UserContext';
 import Photo from '@/pages/photo';
 import Profile from '@/pages/profile';
+import NotFound from '@/pages/not-found';
 
 const Routes: React.FC = () => {
   const { user } = useContext(UserContext);
@@ -37,6 +38,7 @@ const Routes: React.FC = () => {
       </Route>
       <Route path="foto/:id" element={<Photo />} />
       <Route path="perfil/:user" element={<Profile />} />
+      <Route path="*" element={<NotFound />} />
     </RoutesDom>
   );
 };

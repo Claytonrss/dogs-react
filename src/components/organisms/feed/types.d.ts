@@ -1,3 +1,3 @@
 interface FeedProps {
-  userID?: number;
+  userID?: string;
 }

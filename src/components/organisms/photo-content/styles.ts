@@ -34,6 +34,24 @@ export const Container = styled.div`
       grid-row: 1;
     }
   }
+
+  &.single {
+    grid-template-columns: 1fr;
+    height: auto;
+    .photo-content-img {
+      grid-row: 1;
+      border-radius: 0.4rem;
+      overflow: hidden;
+    }
+
+    ul {
+      padding: 0px;
+    }
+
+    form {
+      margin: 1rem 0px;
+    }
+  }
 `;
 export const Author = styled.p`
   opacity: 0.5;
@@ -50,6 +68,9 @@ export const Author = styled.p`
 `;
 export const Details = styled.div`
   padding: 2rem 2rem 0 2rem;
+  &.single {
+    padding: 2rem 0 0 0;
+  }
 `;
 export const Views = styled.span`
   &::before {

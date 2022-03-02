@@ -72,12 +72,24 @@ export function PHOTOS_GET({ page, total, user }: PhotosGetProps) {
     },
   };
 }
-export function PHOTO_GET(id: number) {
+export function PHOTO_GET(id: string) {
   return {
     url: `${API_URL}/api/photo/${id}`,
     options: {
       method: 'GET',
       cache: 'no-store',
+    },
+  };
+}
+
+export function PHOTO_DELETE(id: number, token: string) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
     },
   };
 }
@@ -92,17 +104,6 @@ export function COMMENT_POST(id: number, body: {}, token: string) {
         Authorization: 'Bearer ' + token,
       },
       body: JSON.stringify(body),
-    },
-  };
-}
-export function PHOTO_DELETE(id: number, token: string) {
-  return {
-    url: `${API_URL}/api/photo/${id}`,
-    options: {
-      method: 'DELETE',
-      headers: {
-        Authorization: 'Bearer ' + token,
-      },
     },
   };
 }

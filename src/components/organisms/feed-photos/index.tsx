@@ -8,19 +8,29 @@ import { PhotoProps } from 'types';
 import { Container } from './styles';
 import { FeedPhotosProps } from './types';
 
-const FeedPhotos: React.FC<FeedPhotosProps> = ({ setModalPhoto, userID }) => {
+const FeedPhotos: React.FC<FeedPhotosProps> = ({
+  setModalPhoto,
+  setInfinite,
+  userID,
+  page,
+}) => {
   const { data, error, loading, request } = useFetch();
+  const photosPerPage = 6;
+
   useEffect(() => {
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({
-        page: 1,
-        total: 3,
-        user: userID || 0,
+        page,
+        total: photosPerPage,
+        user: userID || '0',
       });
       const { response, json } = await request(url, options);
+      if (response && response?.ok && json.length < photosPerPage) {
+        setInfinite(false);
+      }
     }
     fetchPhotos();
-  }, [userID]);
+  }, [userID, photosPerPage, page, setInfinite]);
 
   if (error) return <Error>{error}</Error>;
   if (loading) return <Loading />;

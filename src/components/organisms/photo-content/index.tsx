@@ -8,14 +8,14 @@ import { Link } from 'react-router-dom';
 import { Attributes, Author, Container, Details, Views } from './styles';
 import { PhotoContentProps } from './types';
 
-const PhotoContent: React.FC<PhotoContentProps> = ({ data }) => {
+const PhotoContent: React.FC<PhotoContentProps> = ({ data, isSingle }) => {
   const { photo, comments } = data;
   const context = useContext(UserContext);
 
   return (
-    <Container>
+    <Container className={isSingle ? 'single' : ''}>
       <Image src={photo.src} alt={photo.title} className="photo-content-img" />
-      <Details>
+      <Details className={isSingle ? 'single' : ''}>
         <div>
           <Author>
             {context.user && context.user.username === photo.author ? (

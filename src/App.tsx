@@ -7,13 +7,17 @@ import Routes from '@/routes/index';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <UserStorage>
-        <Routes />
-        <Header />
-        <Footer />
-      </UserStorage>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <UserStorage>
+          <Header />
+          <main className="AppBody">
+            <Routes />
+          </main>
+          <Footer />
+        </UserStorage>
+      </BrowserRouter>
+    </div>
   );
 };
 

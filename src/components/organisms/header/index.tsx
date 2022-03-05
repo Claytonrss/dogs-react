@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ContainerLogin, ContainerLogo, HeaderContainer, Nav } from './styles';
 
 const Header: React.FC = () => {
-  const { user, userLogout } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   return (
     <HeaderContainer>

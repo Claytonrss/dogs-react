@@ -87,4 +87,15 @@ a {
     transform: initial;
   }
 }
+
+
+.App{
+  display:flex;
+  flex-direction: column;
+  min-height: calc(100% + 10rem);
+}
+
+.AppBody{
+  flex:1;
+}
 `;

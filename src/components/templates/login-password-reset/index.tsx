@@ -40,7 +40,7 @@ const LoginPasswordReset: React.FC = () => {
   }
 
   return (
-    <section>
+    <section className="animeLeft">
       <Heading tag="h1">Reset a senha</Heading>
       <form onSubmit={handleSubmit}>
         <Input

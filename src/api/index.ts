@@ -132,3 +132,15 @@ export function PASSWORD_RESET_POST(body: {}) {
     },
   };
 }
+export function STATS_GET(token: string) {
+  return {
+    url: `${API_URL}/api/stats`,
+    options: {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token,
+      },
+    },
+  };
+}

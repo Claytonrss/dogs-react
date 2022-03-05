@@ -82,7 +82,7 @@ export function PHOTO_GET(id: string) {
   };
 }
 
-export function PHOTO_DELETE(id: number, token: string) {
+export function PHOTO_DELETE(id: string, token: string) {
   return {
     url: `${API_URL}/api/photo/${id}`,
     options: {
@@ -94,7 +94,7 @@ export function PHOTO_DELETE(id: number, token: string) {
   };
 }
 
-export function COMMENT_POST(id: number, body: {}, token: string) {
+export function COMMENT_POST(id: string, body: {}, token: string) {
   return {
     url: `${API_URL}/api/comment/${id}`,
     options: {
@@ -102,6 +102,31 @@ export function COMMENT_POST(id: number, body: {}, token: string) {
       headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token,
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function PASSWORD_LOST_POST(body: {}) {
+  return {
+    url: `${API_URL}/api/password/lost`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+export function PASSWORD_RESET_POST(body: {}) {
+  return {
+    url: `${API_URL}/api/password/reset`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
     },

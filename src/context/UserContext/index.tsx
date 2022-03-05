@@ -51,14 +51,14 @@ export const UserStorage: React.FC = ({ children }) => {
       setLoading(true);
       const { url, options } = TOKEN_POST({ username, password });
       const response = await fetch(url, options);
-      if (!response.ok) throw new Error(`Erro: ${response.statusText}`);
+      if (!response.ok) throw new Error('Falha no login');
       const json = await response.json();
       window.localStorage.setItem('token', json.token);
       await getUser(json.token);
       navigate('/conta');
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
       }
     } finally {
       setLoading(false);

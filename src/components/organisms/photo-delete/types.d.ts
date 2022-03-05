@@ -1,3 +1,3 @@
 interface PhotoDeleteProps {
-  id: number;
+  id: string;
 }

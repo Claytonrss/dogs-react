@@ -13,6 +13,8 @@ import { UserContext } from '@/context/UserContext';
 import Photo from '@/pages/photo';
 import Profile from '@/pages/profile';
 import NotFound from '@/pages/not-found';
+import LoginPasswordLost from '@/components/templates/login-password-lost';
+import LoginPasswordReset from '@/components/templates/login-password-reset';
 
 const Routes: React.FC = () => {
   const { user } = useContext(UserContext);
@@ -23,6 +25,8 @@ const Routes: React.FC = () => {
       <Route path="/login/" element={<Login />}>
         <Route path="" element={<LoginForm />}></Route>
         <Route path="criar" element={<LoginCreate />}></Route>
+        <Route path="perdeu" element={<LoginPasswordLost />}></Route>
+        <Route path="resetar" element={<LoginPasswordReset />}></Route>
       </Route>
       <Route
         path="/conta/*"

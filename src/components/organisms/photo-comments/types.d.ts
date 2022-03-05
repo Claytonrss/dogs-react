@@ -1,6 +1,6 @@
 import { CommentProps } from '@/types/index';
 
 interface PhotoCommentsProps {
-  id: number;
+  id: string;
   comments: CommentProps[];
 }

@@ -6,7 +6,7 @@ export interface PhotoProps {
   acessos: string;
   author: string;
   date: string;
-  id: number;
+  id: string;
   idade: string;
   peso: string;
   src: string;

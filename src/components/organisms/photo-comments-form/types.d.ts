@@ -1,6 +1,6 @@
 import { CommentProps } from '@/types/index';
 
 interface PhotoCommentsFormProps {
-  id: number;
+  id: string;
   setComments: React.Dispatch<React.SetStateAction<CommentProps[]>>;
 }

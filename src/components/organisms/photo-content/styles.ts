@@ -13,6 +13,10 @@ export const Container = styled.div`
   transform: scale(0.8);
   animation: scaleUp 0.3s forwards;
 
+  &.not-logged {
+    padding-bottom: 2rem;
+  }
+
   @keyframes scaleUp {
     to {
       opacity: 1;
@@ -29,15 +33,18 @@ export const Container = styled.div`
 
   .photo-content-img {
     grid-row: 1/4;
+    overflow: hidden;
 
     @media (max-width: 64rem) {
       grid-row: 1;
+      min-height: 100%;
     }
   }
 
   &.single {
     grid-template-columns: 1fr;
     height: auto;
+
     .photo-content-img {
       grid-row: 1;
       border-radius: 0.4rem;

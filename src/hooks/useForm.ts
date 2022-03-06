@@ -2,6 +2,7 @@ import React, { ChangeEvent, useState } from 'react';
 
 type typesValidationEnum =
   | 'email'
+  | 'name'
   | 'username'
   | 'password'
   | 'number'
@@ -15,6 +16,10 @@ const validation: typesValidationInterface = {
   notEmpty: {
     regex: /^[^]+$/,
     message: 'Preencha um valor válido',
+  },
+  name: {
+    regex: /^([ \u00c0-\u01ffa-zA-Z'\-])+$/,
+    message: 'Preencha um nome válido',
   },
   username: {
     regex: /^(?=.{3,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/,

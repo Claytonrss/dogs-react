@@ -34,6 +34,8 @@ const FeedPhotos: React.FC<FeedPhotosProps> = ({
 
   if (error) return <Error>{error}</Error>;
   if (loading) return <Loading />;
+  if (data && (data as []).length == 0 && page <= 1)
+    return <p>Você ainda não possui fotos.</p>;
   if (data)
     return (
       <Container className="animeLeft">

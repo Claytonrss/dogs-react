@@ -4,8 +4,6 @@ import Feed from '@/components/organisms/feed';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-// import { Container } from './styles';
-
 const Profile: React.FC = () => {
   const { user } = useParams();
 

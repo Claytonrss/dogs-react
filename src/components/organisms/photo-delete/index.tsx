@@ -1,4 +1,5 @@
 import { PHOTO_DELETE } from '@/api/index';
+import Loading from '@/components/atoms/loading';
 import useFetch from '@/hooks/useFetch';
 import React, { MouseEvent } from 'react';
 import { Container } from './styles';
@@ -21,7 +22,7 @@ const PhotoDelete: React.FC<PhotoDeleteProps> = ({ id }) => {
   return (
     <>
       {loading ? (
-        <Container>Carregando...</Container>
+        <Loading />
       ) : (
         <Container onClick={handleClick}>Deletar</Container>
       )}

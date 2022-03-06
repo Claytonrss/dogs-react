@@ -9,6 +9,10 @@ export const Container = styled.section`
   #img {
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const PreviewPhoto = styled.div`
   border-radius: 1rem;

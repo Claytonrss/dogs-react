@@ -2,8 +2,6 @@ import Head from '@/components/atoms/head';
 import Heading from '@/components/atoms/heading';
 import React from 'react';
 
-// import { Container } from './styles';
-
 const NotFound: React.FC = () => {
   return (
     <>

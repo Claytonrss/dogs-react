@@ -13,7 +13,13 @@ const Input: React.FC<InputProps> = ({
   return (
     <InputContainer>
       {label && <label htmlFor={name}>{label}</label>}
-      <input type={type} id={name} onChange={onChange} onBlur={onBlur} />
+      <input
+        type={type}
+        id={name}
+        name={name}
+        onChange={onChange}
+        onBlur={onBlur}
+      />
       <Error>{error}</Error>
     </InputContainer>
   );

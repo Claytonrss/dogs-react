@@ -23,6 +23,8 @@ const UserStats: React.FC = () => {
 
   if (loading) return <Loading />;
   if (error) return <Error>{error}</Error>;
+  if (data && (data as []).length == 0)
+    return <p>Você ainda não possui estatísticas.</p>;
   if (data)
     return (
       <React.Suspense fallback={<Loading />}>

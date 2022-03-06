@@ -24,7 +24,7 @@ const LoginPasswordLost: React.FC = () => {
   }
 
   return (
-    <section>
+    <section className="animeLeft">
       <Heading tag="h1">Perdeu a senha?</Heading>
       {data ? (
         <p style={{ color: '#4c1' }}>{data}</p>

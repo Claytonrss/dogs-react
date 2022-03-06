@@ -11,7 +11,7 @@ const HeaderUser: React.FC = () => {
   useEffect(() => {
     switch (pathname) {
       case '/conta':
-        setTitle('Feed');
+        setTitle('Meu Feed');
         break;
       case '/conta/postar':
         setTitle('Poste Sua Foto');

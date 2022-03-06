@@ -16,7 +16,7 @@ const PhotoComments: React.FC<PhotoCommentsProps> = props => {
 
   return (
     <>
-      <CommentList ref={commentsSection}>
+      <CommentList ref={commentsSection} className={!login ? 'not-logged' : ''}>
         {comments.map(comment => (
           <CommentItem key={comment.comment_ID}>
             <b>{comment.comment_author}:</b>

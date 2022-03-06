@@ -13,10 +13,6 @@ export const Container = styled.div`
   transform: scale(0.8);
   animation: scaleUp 0.3s forwards;
 
-  &.not-logged {
-    padding-bottom: 2rem;
-  }
-
   @keyframes scaleUp {
     to {
       opacity: 1;

@@ -13,11 +13,7 @@ const PhotoContent: React.FC<PhotoContentProps> = ({ data, isSingle }) => {
   const context = useContext(UserContext);
 
   return (
-    <Container
-      className={
-        isSingle ? 'single' : '' + (!context.user?.id ? 'not-logged' : '')
-      }
-    >
+    <Container className={isSingle ? 'single' : ''}>
       <Link to={`/foto/${photo.id}`} className="photo-content-img">
         <Image src={photo.src} alt={photo.title} />
       </Link>
